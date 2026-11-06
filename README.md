@@ -4,7 +4,7 @@ Interactive map of traffic tickets by road in Babylon, Brookhaven, Huntington, I
 
 **Live map:** https://sambiblow.github.io/suffolk-ticket-map/
 
-![Map preview](suffolk_ticket_roads.png)
+[![Map preview](suffolk_ticket_roads.png)](https://sambiblow.github.io/suffolk-ticket-map/suffolk_ticket_roads.html)
 
 ## What it shows
 - Every road with at least one ticket, colored yellow (few) to red (most) on a log scale
