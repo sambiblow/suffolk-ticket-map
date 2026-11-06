@@ -2,7 +2,7 @@
 
 Interactive map of traffic tickets by road in Babylon, Brookhaven, Huntington, Islip and Smithtown (Suffolk County, NY), January 2024 to October 2026.
 
-**Live map:** https://sambiblow.github.io/suffolk-ticket-map/
+**Live map:** https://sambiblow.github.io/suffolk-ticket-map/suffolk_ticket_roads.html
 
 [![Map preview](suffolk_ticket_roads.png)](https://sambiblow.github.io/suffolk-ticket-map/suffolk_ticket_roads.html)
 
