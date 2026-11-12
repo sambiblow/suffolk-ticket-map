@@ -12,7 +12,7 @@ All five charts in one page, with a tab for each:
 | [Road map](https://sambiblow.github.io/suffolk-ticket-map/suffolk_ticket_roads.html) | Which roads get the most tickets? |
 | [Crash map](https://sambiblow.github.io/suffolk-ticket-map/crash_map.html) | Where do crash-related tickets happen? |
 | [When tickets happen](https://sambiblow.github.io/suffolk-ticket-map/ticket_heatmap.html) | What hours and days are tickets written? |
-| [Enforcement vs. crashes](https://sambiblow.github.io/suffolk-ticket-map/crash_vs_tickets.html) | Is enforcement happening when crashes happen? |
+| [When crashes happen](https://sambiblow.github.io/suffolk-ticket-map/crash_vs_tickets.html) | What hours and days do crashes happen? |
 | [Multi-ticket stops](https://sambiblow.github.io/suffolk-ticket-map/ticket_sankey.html) | What else gets written once a driver is stopped? |
 
 ![Road map preview](suffolk_ticket_roads.png)
@@ -20,7 +20,7 @@ All five charts in one page, with a tab for each:
 ## Key findings
 - **A few corridors dominate enforcement.** The Long Island Expressway alone accounts for about 20% of all tickets, followed by Sunrise Highway and the Southern State Parkway.
 - **Highways have the most crash-related tickets but low crash rates.** The LIE in Brookhaven has 44,224 tickets and a 0.8% crash rate. Some local roads are much higher, such as Frowein Rd (13.8%), Patchogue Yaphank Rd (10.7%) and Nicolls Rd in Islip (9.3%).
-- **Enforcement timing does not match crash timing.** 27.8% of tickets are written from 8 to 11 a.m., but only 17.0% of crash-related tickets happen then. From 3 to 6 p.m., crash-related tickets make up 31.4% of the total compared with 26.8% of all tickets.
+- **Crashes peak in the afternoon commute.** About 4,100 crash-related tickets were written from 3 to 6 p.m., nearly twice the 2,200 written from 8 to 11 a.m. The worst single hour is 5 p.m. (1,154).
 - **Stops often turn into paperwork checks.** At stops with 2 or more tickets, unlicensed driver is the most common extra ticket, whether the stop began with speeding, a stop sign or tinted windows.
 - **Islip writes the most tickets per resident.** Brookhaven has the most tickets overall, but adjusted for population, Islip is highest.
 
@@ -37,8 +37,8 @@ Every road with at least one crash-related ticket, with two views:
 ### When tickets happen
 A 24-hour by 7-day heatmap with a dropdown for violation type. Each type is shown as a share of its own tickets, so patterns can be compared across types of different sizes. Weekday tickets peak from 8 to 11 a.m. and around 4 to 5 p.m. Speeding is the only type that peaks in the morning.
 
-### Enforcement vs. crashes
-Compares the share of all tickets with the share of crash-related tickets by hour and by day of week. Ticketing peaks in the morning and drops on weekends, while crash-related tickets peak in the late afternoon and stay higher on weekends.
+### When crashes happen
+A bar chart of the 12,919 crash-related tickets by hour of day, with a button to switch to day of week. The busiest hours (3 to 6 p.m.) are shown in red. Friday has the most crash-related tickets (2,023) and Sunday the fewest (1,636).
 
 ### Multi-ticket stops
 For the 101,917 stops with 2 or more tickets, shows why each stop happened (left) and what other tickets were written during it (right).
@@ -65,7 +65,7 @@ For the 101,917 stops with 2 or more tickets, shows why each stop happened (left
 | `suffolk_ticket_roads.html` | Interactive road map |
 | `crash_map.html` | Interactive crash map |
 | `ticket_heatmap.html` | Interactive hour-by-day heatmap |
-| `crash_vs_tickets.html` | Interactive enforcement vs. crash timing chart |
+| `crash_vs_tickets.html` | Interactive chart of when crashes happen |
 | `ticket_sankey.html` | Interactive multi-ticket stop diagram |
 | `suffolk_ticket_roads.png` | Static road map |
 
