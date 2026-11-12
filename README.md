@@ -1,19 +1,29 @@
 # Where Western Suffolk Gets Ticketed
 
-Interactive maps and charts of traffic tickets in Babylon, Brookhaven, Huntington, Islip and Smithtown (Suffolk County, NY), January 2024 to October 2026.
+Interactive maps and charts of 494,344 traffic tickets written in Babylon, Brookhaven, Huntington, Islip and Smithtown (Suffolk County, NY), January 2024 to October 2026.
 
-**Live road map:** https://sambiblow.github.io/suffolk-ticket-map/suffolk_ticket_roads.html
+## Live charts
+| Chart | What it answers |
+|---|---|
+| [Road map](https://sambiblow.github.io/suffolk-ticket-map/suffolk_ticket_roads.html) | Which roads get the most tickets? |
+| [Hour-by-day heatmap](https://sambiblow.github.io/suffolk-ticket-map/ticket_heatmap.html) | When are tickets written? |
+| [Multi-ticket stops (Sankey)](https://sambiblow.github.io/suffolk-ticket-map/ticket_sankey.html) | What else gets written once a driver is stopped? |
+| [Enforcement vs. crash timing](https://sambiblow.github.io/suffolk-ticket-map/crash_vs_tickets.html) | Is enforcement happening when crashes happen? |
 
-**Live hour-by-day heatmap:** https://sambiblow.github.io/suffolk-ticket-map/ticket_heatmap.html
+![Road map preview](suffolk_ticket_roads.png)
 
-![Map preview](suffolk_ticket_roads.png)
+## Key findings
+- **A few corridors dominate.** The Long Island Expressway alone accounts for about 20% of all tickets, followed by Sunrise Highway and the Southern State Parkway.
+- **Islip writes the most tickets per resident.** Brookhaven has the most tickets overall, but adjusted for population, Islip is highest.
+- **Stops often turn into paperwork checks.** At stops with 2 or more tickets, unlicensed driver is the most common extra ticket, whether the stop began with speeding, a stop sign or tinted windows.
+- **Enforcement timing does not match crash timing.** 27.8% of tickets are written from 8 to 11 a.m., but only 17.0% of crash-related tickets happen then. From 3 to 6 p.m., crash-related tickets make up 31.4% of the total compared with 26.8% of all tickets.
 
 ## Road map
 - Every road with at least one ticket, colored yellow (few) to red (most) on a log scale
 - A switch for all years, 2024, 2025 and 2026
 - Stats for each period: busiest roads, busiest day and month, tickets per 1,000 residents by town
 
-### How it works
+**How roads were matched:**
 1. Ticket locations are typed by hand, so each one is cleaned into a standard road name (removing direction notes, cross streets and house numbers, and combining spellings like "LIE", "I 495" and "W/B 495").
 2. Census road lines are cut at town borders.
 3. Each ticket is matched to a road with the same name in the same town. 95.6% of tickets were matched.
@@ -23,19 +33,41 @@ Interactive maps and charts of traffic tickets in Babylon, Brookhaven, Huntingto
 - A dropdown to switch between violation types: speeding, signs and signals, phone and seat belt, paperwork, equipment and truck safety
 - Each type is shown as a share of its own tickets, so patterns can be compared across types of different sizes
 
-Key findings: weekday tickets peak from 8 to 11 a.m. and around 4 to 5 p.m. Speeding is the only type that peaks in the morning, and truck safety tickets are concentrated in a few weekday afternoon hours.
+Weekday tickets peak from 8 to 11 a.m. and around 4 to 5 p.m. Speeding is the only type that peaks in the morning, and truck safety tickets are concentrated in a few weekday afternoon hours.
+
+## Multi-ticket stops (Sankey)
+The data has no stop ID, so tickets with the same date, time, driver birth date and location were grouped into one stop. For the 101,917 stops with 2 or more tickets, the chart shows why each stop happened (left) and what other tickets were written during it (right).
+
+## Enforcement vs. crash timing
+Compares the share of all tickets with the share of crash-related tickets, by hour of day and by day of week. Ticketing peaks in the morning and drops on weekends, while crash-related tickets peak in the late afternoon and stay higher on weekends.
+
+## Limitations
+- Tickets show where and when police enforced, not how people drive. Roads with little patrol can look safe.
+- "Crash-related" means tickets written at a crash scene, not all crashes. Actual crash records would make the timing comparison stronger.
+- Stops are estimated from shared date, time, birth date and location, since the data has no stop ID.
+- 4.4% of tickets could not be matched to a road because their location was too vague.
+- October 2026 is a partial month (data ends October 8).
 
 ## Files
-- `ticket_map.ipynb`: code for the road map
-- `ticket_heatmap.ipynb`: code for the heatmap
-- `suffolk_ticket_roads.html`, `ticket_heatmap.html`: the interactive charts
-- `suffolk_ticket_roads.png`: static road map
+| File | Description |
+|---|---|
+| `ticket_map.ipynb` | Code for the road map |
+| `ticket_heatmap.ipynb` | Code for the heatmap, Sankey and crash timing charts |
+| `suffolk_ticket_roads.html` | Interactive road map |
+| `ticket_heatmap.html` | Interactive hour-by-day heatmap |
+| `ticket_sankey.html` | Interactive multi-ticket stop diagram |
+| `crash_vs_tickets.html` | Interactive enforcement vs. crash timing chart |
+| `suffolk_ticket_roads.png` | Static road map |
 
 ## Data
-- Ticket data: provided by the project sponsor (not included in this repo)
-- Roads and town borders: U.S. Census Bureau TIGER/Line 2024
+- **Ticket data:** provided by the project sponsor. Not included in this repo.
+- **Roads and town borders:** U.S. Census Bureau TIGER/Line 2024
+- **Town populations:** 2020 U.S. Census
 
 ## Tools
-Python (pandas, geopandas, matplotlib, folium, plotly)
+Python (pandas, geopandas, matplotlib, folium, plotly), Power BI
 
+To run the notebooks, install the libraries with `pip install pandas geopandas matplotlib folium plotly`. The ticket data file (`ticket_data_clean.zip`) is not public, so the notebooks need it to be supplied separately.
+
+---
 Business Analytics Capstone, Farmingdale State College, Fall 2026
