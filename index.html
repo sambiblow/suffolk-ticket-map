@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Western Suffolk Traffic Tickets</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, sans-serif; background: #f4f5f3; color: #1d2326; height: 100vh; display: flex; flex-direction: column; }
+  header { padding: 14px 20px 0; background: #fff; border-bottom: 1px solid #d6dbd8; }
+  h1 { margin: 0 0 4px; font-size: 22px; }
+  .sub { margin: 0 0 12px; color: #5d686e; font-size: 14px; }
+  nav { display: flex; gap: 4px; flex-wrap: wrap; }
+  .tab { border: 1px solid #d6dbd8; border-bottom: none; background: #eef0ed; padding: 9px 16px; font-size: 14px;
+         border-radius: 6px 6px 0 0; cursor: pointer; color: #1d2326; }
+  .tab.on { background: #fff; font-weight: bold; border-color: #b9c1bd; position: relative; top: 1px; }
+  .tab:focus-visible { outline: 2px solid #1f6f8b; }
+  #desc { padding: 10px 20px; font-size: 14px; color: #5d686e; background: #fff; border-bottom: 1px solid #d6dbd8; }
+  iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+  footer { padding: 6px 20px; font-size: 12px; color: #5d686e; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Where Western Suffolk Gets Ticketed</h1>
+  <p class="sub">494,248 traffic tickets in Babylon, Brookhaven, Huntington, Islip and Smithtown, January 2024 to October 2026.</p>
+  <nav>
+<button class="tab on" data-src="suffolk_ticket_roads.html" data-desc="Every ticketed road, colored by ticket count. Switch years at the bottom right.">Road map</button>
+<button class="tab" data-src="crash_map.html" data-desc="Where crash-related tickets happen, by count and by crash rate.">Crash map</button>
+<button class="tab" data-src="ticket_heatmap.html" data-desc="Tickets by hour and day of the week. Use the dropdown to pick a violation type.">When tickets happen</button>
+<button class="tab" data-src="crash_vs_tickets.html" data-desc="When tickets are written compared with when crash-related tickets happen.">Enforcement vs. crashes</button>
+<button class="tab" data-src="ticket_sankey.html" data-desc="Why stops happened and what else was written during them.">Multi-ticket stops</button>
+  </nav>
+</header>
+<div id="desc">Every ticketed road, colored by ticket count. Switch years at the bottom right.</div>
+<iframe id="frame" src="suffolk_ticket_roads.html" title="Chart"></iframe>
+<footer>Business Analytics Capstone, Farmingdale State College, Fall 2026. Crash-related means a ticket written at a crash scene, not every crash.</footer>
+<script>
+  document.querySelectorAll(".tab").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab").forEach(b => b.classList.remove("on"));
+      btn.classList.add("on");
+      document.getElementById("frame").src = btn.dataset.src;
+      document.getElementById("desc").textContent = btn.dataset.desc;
+    });
+  });
+</script>
+</body>
+</html>
