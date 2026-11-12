@@ -26,15 +26,15 @@
   <p class="sub">494,248 traffic tickets in Babylon, Brookhaven, Huntington, Islip and Smithtown, January 2024 to October 2026.</p>
   <nav>
 <button class="tab on" data-src="suffolk_ticket_roads.html" data-desc="Every ticketed road, colored by ticket count. Switch years at the bottom right.">Road map</button>
-<button class="tab" data-src="crash_map.html" data-desc="Where crash-related tickets happen, by count and by crash rate.">Crash map</button>
+<button class="tab" data-src="crash_map.html" data-desc="Where crash-related tickets happen, by count and by crash rate. Crash-related means a ticket written at a crash scene, not every crash.">Crash map</button>
 <button class="tab" data-src="ticket_heatmap.html" data-desc="Tickets by hour and day of the week. Use the dropdown to pick a violation type.">When tickets happen</button>
-<button class="tab" data-src="crash_vs_tickets.html" data-desc="Crash-related tickets by hour and day. Crashes peak from 3 to 6 PM.">When crashes happen</button>
+<button class="tab" data-src="crash_vs_tickets.html" data-desc="Crash-related tickets by hour and day. Crashes peak from 3 to 6 PM. Crash-related means a ticket written at a crash scene, not every crash.">When crashes happen</button>
 <button class="tab" data-src="ticket_sankey.html" data-desc="Why stops happened and what else was written during them.">Multi-ticket stops</button>
   </nav>
 </header>
 <div id="desc">Every ticketed road, colored by ticket count. Switch years at the bottom right.</div>
 <iframe id="frame" src="suffolk_ticket_roads.html" title="Chart"></iframe>
-<footer>Business Analytics Capstone, Farmingdale State College, Fall 2026. Crash-related means a ticket written at a crash scene, not every crash.</footer>
+<footer>Business Analytics Capstone, Farmingdale State College, Fall 2026.</footer>
 <script>
   document.querySelectorAll(".tab").forEach(btn => {
     btn.addEventListener("click", () => {
