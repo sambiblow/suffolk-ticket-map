@@ -18,7 +18,7 @@ All five charts in one page, with a tab for each:
 ![Road map preview](suffolk_ticket_roads.png)
 
 ## Key findings
-- **A few corridors dominate enforcement.** The Long Island Expressway alone accounts for about 20% of all tickets, followed by Sunrise Highway and the Southern State Parkway.
+- **A few roads dominate enforcement.** The Long Island Expressway alone accounts for about 20% of all tickets, followed by Sunrise Highway and the Southern State Parkway.
 - **Highways have the most crash-related tickets but low crash rates.** The LIE in Brookhaven has 44,224 tickets and a 0.8% crash rate. Some local roads are much higher, such as Frowein Rd (13.8%), Patchogue Yaphank Rd (10.7%) and Nicolls Rd in Islip (9.3%).
 - **Crashes peak in the afternoon commute.** About 4,100 crash-related tickets were written from 3 to 6 p.m., nearly twice the 2,200 written from 8 to 11 a.m. The worst single hour is 5 p.m. (1,154).
 - **Stops often turn into paperwork checks.** At stops with 2 or more tickets, unlicensed driver is the most common extra ticket, whether the stop began with speeding, a stop sign or tinted windows.
